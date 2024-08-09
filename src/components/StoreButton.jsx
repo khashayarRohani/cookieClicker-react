@@ -33,7 +33,7 @@ export default function StoreButton({ cookies, setCookies, setCookieSrc }) {
   return (
     <>
       <h1 className="kreep">
-        <button className="storeButton button button5" onClick={toggleStore}>
+        <button className="storeButton button" onClick={toggleStore}>
           Store
         </button>
       </h1>
