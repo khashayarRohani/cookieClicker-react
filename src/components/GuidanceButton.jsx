@@ -9,7 +9,7 @@ export default function GuidanceButton() {
 
   return (
     <div>
-      <button className="footerButton" onClick={toggleGuide}>
+      <button className="footerButton button-guide" onClick={toggleGuide}>
         {showGuide ? "HideGuide" : "Guide"}
       </button>
       {showGuide && (

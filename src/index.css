@@ -217,6 +217,113 @@ h1.kreep:hover {
   z-index: 2000;
 }
 
+.button-music {
+  background: #00ff7b;
+  border: 2px solid #00ff7b;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-music:hover,
+.button-music:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #34df00;
+}
+
+.button-music:active {
+  opacity: 0.5;
+}
+.button-guide {
+  background: #00ffd5;
+  border: 2px solid #00ffd5;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-guide:hover,
+.button-guide:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ff0000;
+}
+
+.button-guide:active {
+  opacity: 0.5;
+}
+
+.button-reset {
+  background: #ff0000;
+  border: 2px solid #ff0000;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-reset:hover,
+.button-reset:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #00ffd5;
+}
+
+.button-reset:active {
+  opacity: 0.5;
+}
+
 @media (min-width: 900px) {
   body {
     background: url("/Images/df.gif");
@@ -334,6 +441,13 @@ h1.kreep:hover {
   .footerButton {
     width: 300px;
     height: 48px;
+  }
+  .footerImg {
+    position: absolute;
+    width: 80px;
+    height: auto;
+    left: 80%;
+    bottom: 1px;
   }
   .ScoreButtons {
     display: flex;

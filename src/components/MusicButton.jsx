@@ -26,12 +26,12 @@ export default function MusicButton() {
   return (
     <div>
       {isPlay ? (
-        <button className="footerButton" onClick={pause}>
+        <button className="footerButton button-music" onClick={pause}>
           Pause
         </button>
       ) : (
-        <button className="footerButton" onClick={start}>
-          Play
+        <button className="footerButton button-music" onClick={start}>
+          Play Music
         </button>
       )}
     </div>
