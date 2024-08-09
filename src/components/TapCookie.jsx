@@ -12,7 +12,7 @@ export default function TapCookie(props) {
   };
 
   const handleClick = () => {
-    const clickSound = new Audio("../public/Audio/eff.mp3");
+    const clickSound = new Audio("/Audio/eff.mp3");
     // Set scale to a larger value
     setScale(1.8);
     clickSound.play();
