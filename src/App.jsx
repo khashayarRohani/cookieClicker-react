@@ -6,25 +6,57 @@ import LevelButtons from "./components/LevelButtons";
 import Footer from "./components/Footer";
 
 export default function App() {
-  const [cookies, setCookies] = useState(0);
-  const [level, setLevel] = useState(0);
-  const [userName, setUserName] = useState("");
-  const [cookieSrc, setCookieSrc] = useState("/Images/Cookies/first.webp");
+  const [cookies, setCookies] = useState(() => {
+    // Retrieve cookies from local storage or default to 0
+    const savedCookies = localStorage.getItem("cookies");
+    return savedCookies ? parseInt(savedCookies, 10) : 0; // number 10 is used to tell the compiler it is a decimal number
+  });
+  const [level, setLevel] = useState(() => {
+    // Retrieve level from local storage or default to 0
+    const savedLevel = localStorage.getItem("level");
+    return savedLevel ? parseInt(savedLevel, 10) : 0;
+  });
+
+  const [userName, setUserName] = useState(() => {
+    const savedUserName = localStorage.getItem("userName");
+    return savedUserName || ""; // Default to empty string if no username is found
+  });
+
+  const [cookieSrc, setCookieSrc] = useState(() => {
+    // Retrieve cookieSrc from local storage or default to first image
+    const savedCookieSrc = localStorage.getItem("cookieSrc");
+    return savedCookieSrc || "/Images/Cookies/first.webp";
+  });
   function GetUserName() {
-    //for reset button
-    let name = prompt("What Is Your Name?");
-    if (name) setUserName(name);
-    else setUserName("Guest");
+    // Check if a username is already saved in local storage
+    if (!userName || userName == "" || userName == null) {
+      let name = prompt("What Is Your Name?");
+      if (name) {
+        setUserName(name);
+        localStorage.setItem("userName", name); // Save to local storage
+      } else {
+        setUserName("Guest");
+        localStorage.setItem("userName", "Guest"); // Save to local storage
+      }
+    }
   }
 
   const getUserName = () => {
-    //for using inside useEffect
-    let name = prompt("What Is Your Name?");
-    if (name) setUserName(name);
-    else setUserName("Guest");
+    // this is same as GetUserName for using in useEffect- regular version had issue
+    // Check if a username is already saved in local storage
+    if (!userName || userName == "" || userName == null) {
+      let name = prompt("What Is Your Name?");
+      if (name) {
+        setUserName(name);
+        localStorage.setItem("userName", name); // Save to local storage
+      } else {
+        setUserName("Guest");
+        localStorage.setItem("userName", "Guest"); // Save to local storage
+      }
+    }
   };
 
-  useEffect(getUserName, []);
+  useEffect(getUserName, [userName]); //if i do not use UserName here it need double click on reset button to gett username again
 
   const levels = [
     { id: 0, name: "L0", cost: 0, increase: 0, src: "" },
@@ -65,29 +97,57 @@ export default function App() {
     },
   ];
   useEffect(() => {
-    const levelInterveal = setInterval(() => {
-      setCookies((curr) => curr + levels[level].increase);
+    const levelInterval = setInterval(() => {
+      setCookies((curr) => {
+        const newCookies = curr + levels[level].increase;
+        localStorage.setItem("cookies", newCookies); // Save to local storage
+        return newCookies;
+      });
     }, 1000);
-    return () => clearInterval(levelInterveal);
+    return () => clearInterval(levelInterval);
+  }, [level]);
+  useEffect(() => {
+    localStorage.setItem("level", level); // Save to local storage
   }, [level]);
 
-  function tapFarming() {
-    setCookies(cookies + 1);
-  }
+  useEffect(() => {
+    localStorage.setItem("cookieSrc", cookieSrc); // Save to local storage
+  }, [cookieSrc]);
 
+  function tapFarming() {
+    setCookies((curr) => {
+      const newCookies = curr + 1;
+      localStorage.setItem("cookies", newCookies); // Save to local storage
+      return newCookies;
+    });
+  }
   function buyLevel(levelId) {
-    const selectedLevel = levels.find((level) => level.id === levelId); // level is a variable which stands for items in levels
+    const selectedLevel = levels.find((level) => level.id === levelId);
     if (cookies >= selectedLevel.cost) {
       setLevel(levelId); // Update to the specific level clicked
-      setCookies(cookies - selectedLevel.cost);
+      setCookies((curr) => {
+        const newCookies = curr - selectedLevel.cost;
+        localStorage.setItem("cookies", newCookies); // Save to local storage
+        return newCookies;
+      });
     } else {
       alert("Not enough cookies to buy this level.");
     }
   }
+
   const resetGame = () => {
     setCookies(0);
     setLevel(0);
     setCookieSrc("/Images/Cookies/first.webp");
+    localStorage.setItem("cookies", 0); // Save to local storage
+    localStorage.setItem("level", 0); // Save to local storage
+    localStorage.setItem("cookieSrc", "/Images/Cookies/first.webp"); // Save to local storage
+    localStorage.removeItem("userName");
+    setUserName(() => {
+      return "";
+    });
+
+    // Only prompt for username if not already set
     GetUserName();
   };
 

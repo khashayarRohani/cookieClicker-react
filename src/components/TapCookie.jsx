@@ -21,7 +21,6 @@ export default function TapCookie(props) {
       props.TapCookies();
     }
 
-    // Reset the scale after 300ms
     setTimeout(() => {
       setScale(1);
     }, 90);
