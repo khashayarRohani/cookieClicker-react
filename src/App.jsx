@@ -10,7 +10,7 @@ export default function App() {
   const [level, setLevel] = useState(0);
   const [userName, setUserName] = useState("");
   const [cookieSrc, setCookieSrc] = useState(
-    "../src/Images/Cookies/first.webp"
+    "../../src/Images/Cookies/first.webp"
   );
   function GetUserName() {
     //for reset button

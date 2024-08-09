@@ -44,7 +44,7 @@ export default function StoreButton({ cookies, setCookies, setCookieSrc }) {
 
           <div
             onClick={() =>
-              handlePurchase(10, "../src/Images/Cookies/second.webp")
+              handlePurchase(10, "../../src/Images/Cookies/second.webp")
             }
           >
             <img
@@ -52,7 +52,7 @@ export default function StoreButton({ cookies, setCookies, setCookieSrc }) {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               id="selectedImg1"
-              src="src/Images/Cookies/second.webp"
+              src="../../src/Images/Cookies/second.webp"
               alt="Picture 1"
             />
             <p id="Cost1">Cost: 10 cookies</p>
@@ -60,7 +60,7 @@ export default function StoreButton({ cookies, setCookies, setCookieSrc }) {
 
           <div
             onClick={() =>
-              handlePurchase(20, "../src/Images/Cookies/third.png")
+              handlePurchase(20, "../../src/Images/Cookies/third.png")
             }
           >
             <img
@@ -68,7 +68,7 @@ export default function StoreButton({ cookies, setCookies, setCookieSrc }) {
               onMouseEnter={() => setIsHoveredTwo(true)}
               onMouseLeave={() => setIsHoveredTwo(false)}
               id="selectedImg2"
-              src="../src/Images/Cookies/third.png"
+              src="../../src/Images/Cookies/third.png"
               alt="Picture 2"
             />
             <p id="Cost2">Cost: 20 cookies</p>
@@ -76,7 +76,7 @@ export default function StoreButton({ cookies, setCookies, setCookieSrc }) {
 
           <div
             onClick={() =>
-              handlePurchase(0, "../src/Images/Cookies/first.webp")
+              handlePurchase(0, "../../src/Images/Cookies/first.webp")
             }
           >
             <img
@@ -84,7 +84,7 @@ export default function StoreButton({ cookies, setCookies, setCookieSrc }) {
               onMouseEnter={() => setIsHoveredThree(true)}
               onMouseLeave={() => setIsHoveredThree(false)}
               id="selectedImg3"
-              src="../src/Images/Cookies/first.webp"
+              src="../../src/Images/Cookies/first.webp"
               alt="Picture 3"
             />
             <p>Cost: Free</p>
