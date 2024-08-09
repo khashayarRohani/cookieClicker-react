@@ -371,7 +371,7 @@ h1.kreep:hover {
   }
   .ScoreButtons button {
     width: 550px;
-    height: 50px;
+    height: 60px;
     border-radius: 15px;
     overflow: hidden;
     right: 0;
@@ -428,10 +428,22 @@ h1.kreep:hover {
     right: 10%;
     bottom: 14%;
   }
+
+  @keyframes moveLeftRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(450px);
+    }
+    100% {
+      transform: translateX(0); /* Return to original position */
+    }
+  }
 }
 @media (min-width: 1024px) {
   .footer {
-    margin-top: 18%;
+    margin-top: 12%;
     margin-bottom: 0%;
     width: 100%;
     display: flex;
@@ -454,16 +466,17 @@ h1.kreep:hover {
     flex-direction: column;
     align-items: center;
     margin-top: 10%;
-    overflow: hidden;
+
     position: relative;
     margin-left: 30%;
   }
   .ScoreButtons button {
     width: 750px;
-    height: 60px;
+    height: 80px;
     border-radius: 15px;
-    overflow: hidden;
+
     right: 0;
+    position: relative;
   }
   .ScoreImage {
     position: absolute;
@@ -471,6 +484,16 @@ h1.kreep:hover {
     height: auto;
     left: 1%;
     top: 0;
-    overflow: hidden;
+  }
+  @keyframes moveLeftRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(640px);
+    }
+    100% {
+      transform: translateX(0); /* Return to original position */
+    }
   }
 }
