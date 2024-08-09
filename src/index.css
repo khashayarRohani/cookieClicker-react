@@ -19,14 +19,14 @@ body {
   margin: 0;
 }
 .storeButton {
-  background: url(../src/Images/storeBtn.gif);
+  background: url(/Images/storeBtn.gif);
   background-size: cover;
   width: 60px;
   height: 60px;
   z-index: 2000;
 }
 .cookie {
-  background: url(../src/Images/Cookies/first.webp);
+  background: url(/Images/Cookies/first.webp);
   background-size: cover;
   color: rgb(27, 0, 160);
   overflow: hidden;
@@ -116,7 +116,7 @@ body {
   position: fixed;
   top: 0%;
   left: 0%;
-  background: url(../src/Images/download.jpeg);
+  background: url(/Images/download.jpeg);
   background-size: cover;
   z-index: 1000;
   color: black;
@@ -219,7 +219,7 @@ h1.kreep:hover {
 
 @media (min-width: 900px) {
   body {
-    background: url(../src/Images/df.gif);
+    background: url(/Images/df.gif);
     background-size: cover;
   }
 
@@ -247,7 +247,7 @@ h1.kreep:hover {
     top: 40%;
   }
   .storeButton {
-    background: url(../src/Images/storeBtn.gif);
+    background: url(/Images/storeBtn.gif);
     background-size: cover;
     width: 120px;
     height: 60px;
@@ -278,7 +278,7 @@ h1.kreep:hover {
     position: fixed;
     top: 0%;
     left: 0%;
-    background: url(../src/Images/preview.webp);
+    background: url(/Images/preview.webp);
     background-size: cover;
     z-index: 1000;
     color: black;
