@@ -1,0 +1,361 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: aliceblue;
+}
+.fullSection {
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+.storeButton {
+  background: url(../src/Images/storeBtn.gif);
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  z-index: 2000;
+}
+.cookie {
+  background: url(../src/Images/Cookies/first.webp);
+  background-size: cover;
+  color: rgb(27, 0, 160);
+  overflow: hidden;
+  width: 150px;
+  height: 130px;
+  font-size: large;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  cursor: pointer;
+  border: 0;
+}
+.FirstSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ScoreButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  overflow: hidden;
+}
+.ScoreButtons button {
+  width: 250px;
+  height: 50px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.ScoreImage {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  left: 1%;
+  top: 0;
+  overflow: hidden;
+}
+.Selected {
+  color: rgba(0, 229, 255, 0.609);
+  font-weight: 900;
+  box-shadow: 0 4px 8px rgb(3, 166, 55);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+.footer {
+  margin-top: 5%;
+  margin-bottom: 0%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.footerButton {
+  font-size: large;
+  font-weight: 900;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 10px;
+  width: 120px;
+}
+.footerImg {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  left: 80%;
+  bottom: 1px;
+}
+.guide-text {
+  position: absolute;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: black;
+  left: 20%;
+  right: 20%;
+}
+.hidden {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background: url(../src/Images/download.jpeg);
+  background-size: cover;
+  z-index: 1000;
+  color: black;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.hidden div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hidden img {
+  width: 150px;
+  cursor: pointer;
+}
+.hidden p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; /* Clean, modern font */
+  font-size: 16px; /* Base font size */
+  line-height: 1.5; /* Improved readability */
+  text-align: center; /* Center-aligned text (optional) */
+  font-weight: bold; /* Makes text stand out more */
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  text-shadow: 1px 1px 3px rgb(0, 0, 0);
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  font-size: 20px;
+  color: #ff8400;
+}
+.hidden h1 {
+  color: #f5f5f5;
+  text-shadow: 1px 1px 2px rgb(0, 8, 100);
+  font-weight: 900;
+  animation: color 0.8s ease-in-out forwards;
+}
+@keyframes color {
+  0% {
+    color: #f0f0f0;
+  }
+  100% {
+    color: #00ffa6;
+    text-shadow: 1px 1px 2px rgb(43, 0, 255);
+    transform: scale(1.2);
+  }
+}
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  padding-bottom: 90%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 900;
+
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 20%;
+  z-index: 2000;
+}
+
+.button:hover {
+  background-color: #555555;
+  color: white;
+  z-index: 2000;
+}
+.button:hover {
+  background-color: #555555;
+  color: white;
+  z-index: 2000;
+}
+
+/*jump for store button*/
+@keyframes kreep {
+  0% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+  50% {
+    -webkit-transform: scale(0.9, 1.1) translateY(-0.5rem);
+  }
+  70% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+h1.kreep {
+  display: inline-block;
+  /*name-duration-function(ease,eas-in,linear)-delay-count-direction */
+  animation: kreep 0.7s ease 2s infinite alternate;
+  margin: 0;
+  z-index: 2000;
+}
+
+h1.kreep:hover {
+  animation: none;
+  z-index: 2000;
+}
+
+@media (min-width: 900px) {
+  body {
+    background: url(../src/Images/df.gif);
+    background-size: cover;
+  }
+
+  .FirstSection {
+    width: 290px;
+    height: 500px;
+    position: absolute;
+    left: 1%;
+    top: 14%;
+
+    background-size: contain;
+    overflow: hidden;
+  }
+  .FirstSection p {
+    font-size: 25px;
+    font-weight: 700;
+    color: #2fff00;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px rgb(0, 8, 100);
+  }
+  .cookie {
+    width: 250px;
+    height: 210px;
+    position: absolute;
+    top: 40%;
+  }
+  .storeButton {
+    background: url(../src/Images/storeBtn.gif);
+    background-size: cover;
+    width: 120px;
+    height: 60px;
+    z-index: 2000;
+  }
+  .ScoreButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    overflow: hidden;
+    position: relative;
+    margin-left: 30%;
+  }
+  .ScoreButtons button {
+    width: 550px;
+    height: 50px;
+    border-radius: 15px;
+    overflow: hidden;
+    right: 0;
+  }
+  .hidden {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    background: url(../src/Images/preview.webp);
+    background-size: cover;
+    z-index: 1000;
+    color: black;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .footer {
+    margin-top: 35%;
+    margin-bottom: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footerButton {
+    font-size: large;
+    font-weight: 900;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    border-radius: 10px;
+    width: 250px;
+  }
+  .footerImg {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    left: 80%;
+    bottom: 1px;
+  }
+  .guide-text {
+    position: absolute;
+    margin-top: 10px;
+    padding: 10px;
+    border: 5px solid #eeff00;
+    border-radius: 5px;
+    background-color: #58c2e2;
+    color: black;
+    left: 10%;
+    right: 10%;
+    bottom: 14%;
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    margin-top: 18%;
+    margin-bottom: 0%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footerButton {
+    width: 300px;
+    height: 48px;
+  }
+  .ScoreButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    overflow: hidden;
+    position: relative;
+    margin-left: 30%;
+  }
+  .ScoreButtons button {
+    width: 750px;
+    height: 60px;
+    border-radius: 15px;
+    overflow: hidden;
+    right: 0;
+  }
+  .ScoreImage {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    left: 1%;
+    top: 0;
+    overflow: hidden;
+  }
+}
