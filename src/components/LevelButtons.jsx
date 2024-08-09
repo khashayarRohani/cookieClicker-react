@@ -17,6 +17,14 @@ export default function LevelButtons(props) {
               props.cookies < level.cost || level.id <= props.currentLevel
             }
             className={props.currentLevel === level.id ? "Selected" : ""}
+            aria-label={`Level ${level.name}. Cost: ${level.cost} cookies. ${
+              props.cookies < level.cost
+                ? "Not enough cookies"
+                : "Level is Available to purchase"
+            }`}
+            aria-disabled={
+              props.cookies < level.cost || level.id <= props.currentLevel
+            }
           >
             <img
               className="ScoreImage"
