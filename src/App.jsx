@@ -9,9 +9,7 @@ export default function App() {
   const [cookies, setCookies] = useState(0);
   const [level, setLevel] = useState(0);
   const [userName, setUserName] = useState("");
-  const [cookieSrc, setCookieSrc] = useState(
-    "../../src/Images/Cookies/first.webp"
-  );
+  const [cookieSrc, setCookieSrc] = useState("/Images/Cookies/first.webp");
   function GetUserName() {
     //for reset button
     let name = prompt("What Is Your Name?");
@@ -35,35 +33,35 @@ export default function App() {
       name: "L1",
       cost: 10,
       increase: 1,
-      src: "../src/Images/Levels/1.png",
+      src: "/Images/Levels/1.png",
     },
     {
       id: 2,
       name: "L2",
       cost: 20,
       increase: 5,
-      src: "../src/Images/Levels/2.png",
+      src: "/Images/Levels/2.png",
     },
     {
       id: 3,
       name: "L3",
       cost: 45,
       increase: 7,
-      src: "../src/Images/Levels/3.png",
+      src: "/Images/Levels/3.png",
     },
     {
       id: 4,
       name: "L4",
       cost: 100,
       increase: 12,
-      src: "../src/Images/Levels/4.png",
+      src: "/Images/Levels/4.png",
     },
     {
       id: 5,
       name: "L5",
       cost: 800,
       increase: 20,
-      src: "../src/Images/Levels/5.png",
+      src: "/Images/Levels/5.png",
     },
   ];
   useEffect(() => {
@@ -89,7 +87,7 @@ export default function App() {
   const resetGame = () => {
     setCookies(0);
     setLevel(0);
-    setCookieSrc("../src/Images/Cookies/first.webp");
+    setCookieSrc("/Images/Cookies/first.webp");
     GetUserName();
   };
 
